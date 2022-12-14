@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd" bootstrap="vendor/autoload.php" colors="true" convertDeprecationsToExceptions="true" convertNoticesToExceptions="true" convertWarningsToExceptions="true">
+    <testsuites>
+        <testsuite name="Infrastructure">
+            <directory suffix="Test.php">./tests/Infrastructure</directory>
+        </testsuite>
+        <testsuite name="Integration">
+            <directory suffix="Test.php">./tests/Integration</directory>
+        </testsuite>
+        <testsuite name="Modules">
+            <directory suffix="Test.php">./tests/Modules</directory>
+        </testsuite>
+    </testsuites>
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">./infrastructure</directory>
+            <directory suffix=".php">./modules</directory>
+            <directory suffix=".php">./database/factories</directory>
+            <directory suffix=".php">./database/seeders</directory>
+        </include>
+    </coverage>
+    <php>
+        <server name="APP_NAME" value="CRM_API" />
+        <server name="APP_ENV" value="testing" />
+        <server name="APP_DEBUG" value="true" />
+        <server name="APP_KEY" value="base64:gjJp574l4cT1kYBQzDCQdmnTeZ9Pluu6vdYBkTcw4fo=" />
+        <server name="BCRYPT_ROUNDS" value="4" />
+        <server name="SMS_DRIVER" value="void" />
+        <server name="PUSH_DRIVER" value="void" />
+        <server name="CACHE_DRIVER" value="array" />
+        <server name="DB_CONNECTION" value="pgsql" />
+        <server name="MAIL_MAILER" value="array" />
+        <server name="QUEUE_CONNECTION" value="sync" />
+        <server name="TELESCOPE_ENABLED" value="false" />
+        <server name="L5_SWAGGER_GENERATE_ALWAYS" value="false" />
+        <server name="PASSPORT_PRIVATE_KEY" value="-----BEGIN PRIVATE KEY-----\n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\n1n6NEyG3upfNU0o9EXI9EE8RfrLYHw==\n-----END PRIVATE KEY-----" />
+        <server name="PASSPORT_PUBLIC_KEY" value="-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA7QLT1Xd3kcZSY3AcaJlo\nI7qbLpDChuxYCpjywhfaOzRy5SOM275/1O71LTm/OmVvlwjYOV5hl9qOoVsK/emH\n/K8SWRtrW2LHJNTgKT9J5fuSBDS9GBgYtYDZYtr5IIi5CXYUMOOrv7WzW39srXu2\nK65HPmJ8ISnfQ4+Ielga8RbPKU4qi7CzHMALynN+4dQtR9eAP4jwvi3rGSbeY8v5\nner0rL3YiVbp/LPJFnaPMfzdaPpO+0U60o/6YGgHp2dr3nmnCLD24FLsfZGLn/H2\nicbblnITq1hFZKWCzK1HTgMm3xbW+Nm6xOTOVZEn1r8f6TMnvDXgEpWZXWSJaYiF\nrUQ+E/XfkND9nOH/UgLtW5MDQjkSEbQX1IY9rT7yfqqXowvoaoDTF+BMpqJYggVU\naCaSi4DnHLeLHYbmwlT4dD9hmGX/2WNjV8obXUh26g2x9oxCmWp765cT3dipB3oy\nM5iZ7DQhxEJzdBl+y9YBvbNRpsIz2aKaVpbWyxoKQvZsYWUphqWa7ajQBoKtOU/2\ns8qQ/dNi3V/kggIIdxSFNa/00bBIw4qri/zSVTxHEd4zQho8U/EDsRZxukTWAuaC\nD5kSW76UzAxR4piKKcA3s4Q9VBXJz5FH3HD7EWJyVRjx1Toiy4FryHQoyyIKirLm\n0iwaEvv9rNvGwYMFD5N2oFkCAwEAAQ==\n-----END PUBLIC KEY-----" />
+        <server name="WEB_EMAIL_VERIFICATION_URL" value="http://client.app/verifyEmail" />
+        <server name="WEB_RESET_PASSWORD_URL" value="http://client.app/resetPassword" />
+        <server name="GOOGLE2FA_COMPANY" value="CRM" />
+    </php>
+</phpunit>
